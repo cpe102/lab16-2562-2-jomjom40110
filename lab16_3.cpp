@@ -22,3 +22,23 @@ int main(){
 }
 
 //Write Definition of randomVector() showVector() and dotProduct() here
+vector<int> randomVector(int n){
+	vector<int>x(n);
+	x.clear();
+	for(int i=0;i<n;i++){
+		x.push_back(rand()%10);
+	}
+	return x;
+}
+void showVector(vector<int>x){
+	cout << "[ ";
+	for(int i=0;i<x.size();i++)cout << x[i] <<" ";
+	cout << " ]";
+}
+int dotProduct(vector<int>x,vector<int>y){
+	int z=0;
+	for(int i=0;i<x.size();i++){
+		z=z+x[i]*y[i];
+	}
+	return z;
+}
